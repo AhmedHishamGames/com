@@ -62,6 +62,11 @@
             color: white;
         }
         
+        .logo img {
+            height: 150px;
+            margin-left: 10px;
+        }
+        
         .logo i {
             margin-left: 10px;
             color: var(--secondary);
@@ -576,6 +581,7 @@
         
         .footer-column ul {
             list-style: none;
+            padding: 0;
         }
         
         .footer-column ul li {
@@ -672,18 +678,7 @@
             }
         }
 
-
-
-
-
-
         /* إضافة أنماط جديدة لبطاقة اللعبة */
-        .game-card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        
         .view-details-btn {
             background: var(--secondary);
             color: white;
@@ -710,8 +705,10 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <span>Ahmad Hisham</span>
-                <i class="fas fa-gamepad"></i>
+                <!-- هنا تم إصلاح مسار اللوجو -->
+                <img src="logo.png" alt="Ahmad Hisham Logo" onerror="this.style.display='none'">
+             
+              
             </div>
             
             <nav>
@@ -737,6 +734,7 @@
         </div>
     </header>
 
+    <!-- بقية المحتوى يبقى كما هو -->
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -848,7 +846,7 @@
                 <div class="footer-column">
                     <h3>معلومات الاتصال</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i>  الجيزة ,مدينة السادس من اكتوبر  الحصري مول دايموند</li>
+                        <li><i class="fas fa-map-marker-alt"></i> الجيزة ,مدينة السادس من اكتوبر الحصري مول دايموند</li>
                         <li><i class="fas fa-phone"></i> 01118917533</li>
                         <li><i class="fas fa-envelope"></i> info@Ahmad Hisham.com</li>
                     </ul>
@@ -861,6 +859,7 @@
         </div>
     </footer>
 
+ 
     <script>
         // بيانات التطبيق - محدثة لدعم الصور المتعددة والفيديو
         let games = JSON.parse(localStorage.getItem('games')) || [
